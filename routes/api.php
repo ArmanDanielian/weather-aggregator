@@ -21,4 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::prefix('weather')->group(function () {
     Route::get('/source-weather-stack/{city}', [WeatherController::class, 'getWeatherFromSourceWS']);
+    Route::get('/source-open-weather-map/{city}', [WeatherController::class, 'getWeatherFromSourceOPM']);
 });

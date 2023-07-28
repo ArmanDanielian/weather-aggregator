@@ -1,0 +1,261 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Weather app",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/api/weather/source-weather-stack/{city}": {
+            "get": {
+                "tags": [
+                    "Weather"
+                ],
+                "summary": "Get weather data by city",
+                "operationId": "25f6f927973378e73ecac18fa58768ef",
+                "parameters": [
+                    {
+                        "name": "city",
+                        "in": "path",
+                        "description": "The name of the city to get weather data for",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "properties": {
+                                                "city": {
+                                                    "type": "string",
+                                                    "example": "Yerevan"
+                                                },
+                                                "temperature": {
+                                                    "type": "integer",
+                                                    "example": 34
+                                                },
+                                                "windSpeed": {
+                                                    "type": "integer",
+                                                    "example": 13
+                                                },
+                                                "windDegree": {
+                                                    "type": "integer",
+                                                    "example": 200
+                                                },
+                                                "pressure": {
+                                                    "type": "integer",
+                                                    "example": 1004
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "City not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "error": {
+                                            "properties": {
+                                                "message": {
+                                                    "type": "string",
+                                                    "example": "City not found"
+                                                },
+                                                "code": {
+                                                    "type": "integer",
+                                                    "example": "404"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/weather/source-open-weather-map/{city}": {
+            "get": {
+                "tags": [
+                    "Weather"
+                ],
+                "summary": "Get weather data by city",
+                "operationId": "a6a3bd77e028ee42fc49b068f8d2db2c",
+                "parameters": [
+                    {
+                        "name": "city",
+                        "in": "path",
+                        "description": "The name of the city to get weather data for",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "properties": {
+                                                "city": {
+                                                    "type": "string",
+                                                    "example": "Yerevan"
+                                                },
+                                                "temperature": {
+                                                    "type": "integer",
+                                                    "example": 34
+                                                },
+                                                "windSpeed": {
+                                                    "type": "integer",
+                                                    "example": 13
+                                                },
+                                                "windDegree": {
+                                                    "type": "integer",
+                                                    "example": 200
+                                                },
+                                                "pressure": {
+                                                    "type": "integer",
+                                                    "example": 1004
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "City not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "error": {
+                                            "properties": {
+                                                "message": {
+                                                    "type": "string",
+                                                    "example": "City not found"
+                                                },
+                                                "code": {
+                                                    "type": "integer",
+                                                    "example": "404"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/api/weather/average-weather/{city}": {
+            "get": {
+                "tags": [
+                    "Weather"
+                ],
+                "summary": "Get average weather data by city",
+                "operationId": "4f1854537e8f32fb5c5104fe6f245470",
+                "parameters": [
+                    {
+                        "name": "city",
+                        "in": "path",
+                        "description": "The name of the city to get weather data for",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful response",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "data": {
+                                            "properties": {
+                                                "city": {
+                                                    "type": "string",
+                                                    "example": "Yerevan"
+                                                },
+                                                "temperature": {
+                                                    "type": "integer",
+                                                    "example": 34
+                                                },
+                                                "windSpeed": {
+                                                    "type": "integer",
+                                                    "example": 13
+                                                },
+                                                "windDegree": {
+                                                    "type": "integer",
+                                                    "example": 200
+                                                },
+                                                "pressure": {
+                                                    "type": "integer",
+                                                    "example": 1004
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "City not found",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "error": {
+                                            "properties": {
+                                                "message": {
+                                                    "type": "string",
+                                                    "example": "City not found"
+                                                },
+                                                "code": {
+                                                    "type": "integer",
+                                                    "example": "404"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
